@@ -22,9 +22,21 @@ colorSelected();
 //8
 function pintar() {
   let pixelBoard = document.querySelector('#pixel-board')
-   pixelBoard.addEventListener('click', function(event){
+  pixelBoard.addEventListener('click', function (event) {
     let classSelected = document.querySelector('.selected')
-     event.target.style.backgroundColor = window.getComputedStyle(classSelected).backgroundColor;
-   })
-   }
+    event.target.style.backgroundColor = window.getComputedStyle(classSelected).backgroundColor;
+  })
+}
 pintar();
+
+// //9
+function buttonClear () {
+  let pixelBoard = document.getElementsByClassName('pixel')
+  let btnClear = document.querySelector('#clear-board');
+  for (let index = 0; index < pixelBoard.length; index += 1) {
+    btnClear.addEventListener('click', function(event) {
+     pixelBoard[index].style.backgroundColor = 'white'
+    })
+  }
+}
+buttonClear();
