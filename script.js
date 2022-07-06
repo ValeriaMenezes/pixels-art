@@ -34,9 +34,34 @@ function buttonClear () {
   let pixelBoard = document.getElementsByClassName('pixel')
   let btnClear = document.querySelector('#clear-board');
   for (let index = 0; index < pixelBoard.length; index += 1) {
-    btnClear.addEventListener('click', function(event) {
+    btnClear.addEventListener('click', function() {
      pixelBoard[index].style.backgroundColor = 'white'
     })
   }
 }
 buttonClear();
+
+//10
+function board() {
+  let boardSize = document.getElementById('board-size');
+  let pixelsAll = document.getElementsByClassName('pixel');
+  let texto = boardSize.value;
+
+  if(texto === ''){
+    alert('Board inválido!');
+  }
+  let numberPixels = pixelsAll.length;
+  let pixelBoard = document.getElementById('pixel-board');
+  for(let index = 0; index < numberPixels; index +=1) {
+    pixelBoard.removeChild(pixelsAll[0]);
+    pixelBoard.style.backgroundColor = 'white'
+  }
+  pixelBoard.style.gridTemplateColumns = 'repeat('+ texto +', 1fr)';
+  for(let index = 0; index < parseInt(texto) * parseInt(texto); index +=1) {
+    let createPixels = document.createElement('div');
+    createPixels.classList.add('pixel');
+    pixelBoard.appendChild(createPixels);
+  }
+}
+let generateBoard = document.getElementById('generate-board');
+generateBoard.addEventListener('click', board);

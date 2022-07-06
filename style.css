@@ -29,13 +29,33 @@
   background-color: white;
 }
 
+#pixel-board {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 200px;
+  gap: 3px;
+}
+
 #clear-board {
   top: 60px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 5px;
   width: 100px;
-  height: 40px;
+  height: 30px;
   background-color: white;
   border: 1px solid black;
   text-align: center;
+}
+
+#board-size {
+  position: absolute;
+  top: 20%;
+  bottom: px;
+}
+
+#generate-board {
+  position: absolute;
+  top: 20%;
+  left: 200px;
 }
