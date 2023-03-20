@@ -1,8 +1,8 @@
-//6   
+// 6   
 let colorBlack = document.querySelector('div');
 colorBlack.classList.add('selected');
 
-//7   
+// 7   
 function colorSelected() {
   let classSelected = document.getElementsByClassName('color');
   for (let index = 0; index < classSelected.length; index += 1) {
@@ -19,7 +19,7 @@ function elementClick(event) {
 }
 colorSelected();
 
-//8
+// 8
 function pintar() {
   let pixelBoard = document.querySelector('#pixel-board')
   pixelBoard.addEventListener('click', function (event) {
@@ -29,7 +29,7 @@ function pintar() {
 }
 pintar();
 
-// //9
+// 9
 function buttonClear () {
   let pixelBoard = document.getElementsByClassName('pixel')
   let btnClear = document.querySelector('#clear-board');
@@ -41,7 +41,7 @@ function buttonClear () {
 }
 buttonClear();
 
-//10
+// 10
 function board() {
   let boardSize = document.getElementById('board-size');
   let pixelsAll = document.getElementsByClassName('pixel');
